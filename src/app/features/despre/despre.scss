@@ -1,0 +1,12 @@
+.lista {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  background: var(--card);
+  border-left: 4px solid var(--red);
+  border-radius: 8px;
+  padding: 20px 24px;
+}

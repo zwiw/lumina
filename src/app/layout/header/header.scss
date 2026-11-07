@@ -1,12 +1,37 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 40px;
-  background: #14111f;
-  color: white;
+  background: #0a0812;
+  border-bottom: 2px solid var(--gold);
 
-  a { color: white; text-decoration: none; margin-left: 16px; }
-  a.activ { text-decoration: underline; }
-  .logo { color: #e8b04a; font-weight: bold; margin-left: 0; }
+  a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 24px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  a:hover {
+    color: var(--gold);
+  }
+
+  a.activ {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .logo {
+    margin-left: 0;
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--gold);
+    border-bottom: none;
+  }
 }

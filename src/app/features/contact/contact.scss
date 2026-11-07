@@ -1,0 +1,15 @@
+.info {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px 32px;
+  margin-top: 24px;
+  max-width: 500px;
+
+  p {
+    margin: 8px 0;
+  }
+
+  strong {
+    color: var(--gold);
+  }
+}

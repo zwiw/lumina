@@ -1,8 +1,14 @@
 <h2>Program azi</h2>
-<ul>
+<p>Alege filmul și vino la ora potrivită.</p>
+
+<div class="filme">
   @for (film of filme; track film.id) {
-  <li>{{ film.ora }} – {{ film.titlu }} ({{ film.durata }} min)</li>
+  <article class="film">
+    <div class="ora">{{ film.ora }}</div>
+    <h3>{{ film.titlu }}</h3>
+    <p>{{ film.durata }} minute</p>
+  </article>
   } @empty {
-  <li>Nu există filme în program.</li>
+  <p>Nu există filme în program.</p>
   }
-</ul>
+</div>

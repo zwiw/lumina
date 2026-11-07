@@ -1,0 +1,48 @@
+<h2>Rezervă bilete</h2>
+<p>Completează formularul și îți păstrăm locurile.</p>
+
+<div class="formular">
+  <label>
+    Numele tău
+    <input type="text" [value]="nume()" (input)="setNume($event)" placeholder="Ion Popescu">
+  </label>
+
+  <label>
+    Film
+    <select (change)="setFilm($event)">
+      @for (f of filme; track f.id) {
+      <option [value]="f.id" [selected]="f.id === filmId()">{{ f.ora }} – {{ f.titlu }}</option>
+      }
+    </select>
+  </label>
+
+  <label>
+    Număr de bilete (1–10)
+    <input type="number" min="1" max="10" [value]="bilete()" (input)="setBilete($event)">
+  </label>
+
+  <button type="button" class="btn" (click)="trimite()">Rezervă</button>
+
+  @if (eroare()) {
+  <p class="eroare">{{ eroare() }}</p>
+  }
+  @if (mesaj()) {
+  <p class="succes">{{ mesaj() }}</p>
+  }
+</div>
+
+<h3 class="titlu-lista">Rezervările tale</h3>
+
+<div class="lista">
+  @for (r of rezervari(); track r.id) {
+  <div class="rezervare">
+    <div>
+      <strong>{{ r.titlu }}</strong> la {{ r.ora }}
+      <p>{{ r.nume }} · {{ r.bilete }} bilet(e)</p>
+    </div>
+    <button type="button" class="anulare" (click)="anuleaza(r.id)">Anulează</button>
+  </div>
+  } @empty {
+  <p>Nu ai nicio rezervare încă.</p>
+  }
+</div>

@@ -19,6 +19,11 @@ export const routes: Routes = [
         loadComponent: () => import('./features/bilete/bilete').then(m => m.Bilete),
       },
       {
+        path: 'rezervare',
+        title: 'Rezervare',
+        loadComponent: () => import('./features/rezervare/rezervare').then(m => m.Rezervare),
+      },
+      {
         path: 'despre',
         title: 'Despre noi',
         loadComponent: () => import('./features/despre/despre').then(m => m.Despre),

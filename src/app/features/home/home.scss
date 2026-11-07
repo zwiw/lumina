@@ -1,15 +1,53 @@
 .hero {
-  background: #b3262e;
-  color: white;
   text-align: center;
-  padding: 80px 20px;
-  border-radius: 10px;
+  padding: 90px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #b3262e, #3a0f2e);
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 3rem;
+    color: white;
+  }
+
+  p {
+    color: #f3d9dc;
+    font-size: 1.2rem;
+  }
 }
 
 .btn {
   display: inline-block;
-  background: white;
+  margin-top: 16px;
+  padding: 12px 32px;
+  border-radius: 999px;
+  background: var(--gold);
   color: #14111f;
-  padding: 10px 24px;
+  font-weight: bold;
   text-decoration: none;
+}
+
+.btn:hover {
+  background: white;
+}
+
+.avantaje {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  border-top: 3px solid var(--red);
+  padding: 24px;
+
+  h3 {
+    color: var(--text);
+  }
+
+  p {
+    margin: 0;
+  }
 }
