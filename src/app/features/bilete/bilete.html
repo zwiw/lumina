@@ -1,0 +1,14 @@
+<h2>Prețuri bilete</h2>
+<table>
+  <tr>
+    <th>Tip bilet</th>
+    <th>Preț</th>
+  </tr>
+  @for (b of preturi(); track b.tip) {
+  <tr>
+    <td>{{ b.tip }}</td>
+    <td>{{ b.pret }} lei</td>
+  </tr>
+  }
+</table>
+<p>Luni și marti biletul pentru studenti costa la jumatate de pret.</p>

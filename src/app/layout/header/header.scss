@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: #14111f;
+  color: white;
+
+  a { color: white; text-decoration: none; margin-left: 16px; }
+  a.activ { text-decoration: underline; }
+  .logo { color: #e8b04a; font-weight: bold; margin-left: 0; }
+}

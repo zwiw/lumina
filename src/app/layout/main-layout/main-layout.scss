@@ -1,0 +1,12 @@
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.continut {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 24px;
+}

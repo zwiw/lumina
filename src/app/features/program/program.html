@@ -1,0 +1,8 @@
+<h2>Program azi</h2>
+<ul>
+  @for (film of filme; track film.id) {
+  <li>{{ film.ora }} – {{ film.titlu }} ({{ film.durata }} min)</li>
+  } @empty {
+  <li>Nu există filme în program.</li>
+  }
+</ul>
